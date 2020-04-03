@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>对话机器人</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="layer/mobile/need/layer.css"/>
+		<script src="js/jquery3.js"></script>
+		<script src="layer/mobile/layer.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/recorder.js"></script>
+		<script src="js/audio-loader.min.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="head">
+				<div id="title">我的聊天</div>
+				<div id="back">&lt;</div>
+			</div>
+			
+			<div id="content">
+				<div class="message">
+					<div class="time">2020-1-18 17:03:40</div>
+					<div class="chat">
+						<div class="head_left">
+							<img class="img_left" src="img/robot.png"/>
+						</div>
+						<div class="content_left">
+							<audio src="" id="myaudio" controls="controls" loop="false" hidden="true"></audio>
+							<p><i class="iconfont">&#xe667;</i> 3'</p>
+							<hr />
+							<p>我是通智小软，欢迎跟我聊天！</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div id="footer">
+				<div id="btn" v-on:click="changeWay">
+					<div class="btn_voice" v-if="btn">
+						<!--<img src="img/voice.png" />-->
+					</div>
+					<div class="btn_write" v-else>
+						<!--<img src="img/write.png" />-->
+					</div>
+				</div>
+				<div id="word">
+					<div class="word" v-if="btn">
+						<input placeholder="输入文字" v-model="nowMessage" />
+					</div>
+					<div class="word" v-else>
+						<button id="record">按住 说话</button>
+					</div>
+				</div>
+				<div id="send">
+					<div class="send" v-on:click="send">
+						<button>发送</button>
+					</div>
+				</div>
+			</div>
+			
+			<div id="recording">
+				录音中
+			</div>
+		</div>
+	</body>
+	<script src="js/main.js"></script>
+</html>

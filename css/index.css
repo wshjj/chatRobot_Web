@@ -1,0 +1,255 @@
+/*清除默认样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+/*字体图标*/
+@font-face {
+  font-family: 'iconfont';  /* project id 1620397 */
+  src: url('//at.alicdn.com/t/font_1620397_h6g8j50247t.eot');
+  src: url('//at.alicdn.com/t/font_1620397_h6g8j50247t.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1620397_h6g8j50247t.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1620397_h6g8j50247t.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1620397_h6g8j50247t.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1620397_h6g8j50247t.svg#iconfont') format('svg');
+}
+
+/*总容器*/
+#wrap{
+	width: 100%;
+	height: 100%;
+	/*background-color: bisque;*/
+}
+
+/*头部样式*/
+#head{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 7%;
+	background-color: rgba(210, 210, 210, 0.5);
+	/*border-bottom: 1px rgba(240, 240, 240, 0.5);*/
+}
+/*主体内容部分样式*/
+#content{
+	font-size: 24px;
+	position: fixed;
+	top: 7%;
+	left: 0px;
+	width: 100%;
+	height: 85%;
+	background-color: rgba(200, 200, 200, 0.5);
+	overflow-y: scroll;
+	/*overflow-x: hidden;*/
+	word-wrap:break-word
+}
+/*底部样式*/
+#footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 8%;
+	background-color: rgba(220, 220, 220, 0.3);
+}
+
+/*content部分的样式*/
+.message{
+	background-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.time{
+	/*position: absolute;*/
+	background-color: rgba(0,0,0,0);
+	width: 100%;
+	height: 20px;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.chat{
+	/*position: absolute;*/
+	top: 20px;
+	background-color: rgba(0,0,0,0);
+	width: 100%;
+}
+.content_left{
+	background-color: white;
+	/*width: 60%;*/
+	padding: 5px;
+	margin-top: 15px;
+	margin-left: 20px;
+	float: left;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: left;
+}
+.head_left{
+	background-color: rgba(0,0,0,0);
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.img_left{
+	width: 40px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 10px ;
+}
+.content_right{
+	background-color: white;
+	/*width: 60%;*/
+	padding: 5px;
+	margin-top: 15px;
+	margin-right: 20px;
+	float: right;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: left;
+}
+.head_right{
+	background-color: rgba(0,0,0,0);
+	width: 50px;
+	height: 50px;
+	float: right;
+}
+.img_right{
+	width: 40px;
+	height: 40px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+/*head部分的样式*/
+#back{
+	position: absolute;
+	width: 15%;
+	height: 100%;
+	font-size: 30px;
+	/*line-height: 100%;*/
+	padding-left: 20px;
+	text-align: left;
+	float: left;
+}
+#title{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 25px;
+	/*line-height: 100%;*/
+	text-align: center;
+	/*float: right;*/
+}
+
+/*footer部分的样式*/
+/*切换语音和手打的输入方式*/
+#btn{
+	width: 15%;
+	height: 100%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background-color: red;*/
+}
+.btn_voice{
+	width: 80%;
+	height: 80%;
+	/*margin-top: 10%;*/
+	background-image: url(../img/voice.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.btn_write{
+	width: 80%;
+	height: 80%;
+	/*margin-top: 10%;*/
+	background-image: url(../img/write.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*输入内容的输入框*/
+#word{
+	width: 70%;
+	height: 100%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background-color: blue;*/
+}
+.word{
+	width: 90%;
+	height: 70%;
+}
+.word > input{
+	width: 100%;
+	height: 100%;
+	border-width: 0px;
+	font-size: 24px;
+}
+.word > button{
+	width: 100%;
+	height: 100%;
+	border-width: 0px;
+	font-size: 24px;
+}
+/*发送按钮*/
+#send{
+	width: 15%;
+	height: 100%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.send{
+	width: 85%;
+	height: 65%;
+}
+.send > button{
+	width: 100%;
+	height: 100%;
+	border-width: 0px;
+	background-color: greenyellow;
+	font-size: 18px;
+}
+
+/*“录音中...”的蒙层*/
+#recording{
+	display: none;
+	z-index: 100;
+	width: 40vw;
+	height: 40vw;
+	position: absolute;
+	left: 25vw;
+	bottom: 50vh;
+	transform: translate(0,50%);
+	background-color: rgba(50, 50 ,50 ,0.3);
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	line-height: 40vw;
+}
+/*语音的字体图标*/
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
